@@ -366,13 +366,13 @@ static int resolve_dns_servers() {
   if (chnroute_file) {
     if (!(has_chn_dns && has_foreign_dns)) {
       if (compression) {
-        VERR("You should have at least one Chinese DNS and one foreign DNS when "
+        VERR("WARNING: You should have at least one Chinese DNS and one foreign DNS when "
              "using DNS compression pointer mutation\n");
-        return -1;
+        //return -1;
       } else {
-        VERR("You should have at least one Chinese DNS and one foreign DNS when "
+        VERR("WARNING: You should have at least one Chinese DNS and one foreign DNS when "
              "chnroutes is enabled\n");
-        return 0;
+        //return 0;
       }
     }
   }
@@ -914,5 +914,3 @@ Forward DNS requests.\n\
 \n\
 Online help: <https://github.com/clowwindy/ChinaDNS>\n");
 }
-
-
